@@ -1,4 +1,3 @@
-
 default-rows: &default-rows
   rows:
     bottom:
@@ -57,3 +56,6 @@ points:
              spread: 1.7u
              stagger: 2u
              rotate: -20
+  mirror:
+    ref: main_index_home
+    distance: 150
