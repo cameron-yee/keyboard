@@ -4,6 +4,14 @@ default-rows: &default-rows
     home:
     top:
 
+units:
+  gateronX: 15.8
+  gateronY: 15.6
+  u: 15.8
+
+$default_height: gateronY
+$default_width: u
+
 points:
   zones:
     main:
