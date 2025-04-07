@@ -1,0 +1,59 @@
+
+default-rows: &default-rows
+  rows:
+    bottom:
+    home:
+    top:
+
+points:
+  zones:
+    main:
+      <<: *default-rows
+      anchor:
+        rotate: -20
+      columns:
+        ring:
+        middle:
+        index:
+          key:
+            spread: 1.3u
+            stagger: -.3u
+    pinky:
+      anchor:
+        ref: main_ring_bottom
+        shift: [-1.3u, .2u]
+        rotate: 40
+      columns:
+        home:
+        top-left:
+          key:
+            stagger: 1u
+            spread: -.5u
+        top-right:
+    thumb:
+      anchor:
+        ref: main_index_bottom
+        shift: [-.5u, -1.3u]
+      columns:
+        left:
+          key:
+            rotate: 5
+        home:
+          key:
+            spread: 1.2u
+            rotate: -5
+        right:
+          key:
+            spread: 1.2u
+            stagger: -.3u
+            rotate: -20
+        bottom:
+          key:
+            spread: -1.3u
+            stagger: -1u
+            rotate: -4
+        top-right:
+           key:
+             spread: 1.7u
+             stagger: 2u
+             rotate: -20

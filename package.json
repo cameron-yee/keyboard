@@ -1,0 +1,13 @@
+{
+  "name": "keyboard",
+  "version": "0.0.1",
+  "description": "Ergogen based keyboard design",
+  "author": "Cameron Yee",
+  "license": "ISC",
+  "devDependencies": {
+    "ergogen": "^4.1.0"
+  },
+  "scripts": {
+    "build": "npx ergogen ergogen.yml -o dist"
+  }
+}
