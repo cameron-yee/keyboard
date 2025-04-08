@@ -3,6 +3,7 @@ default-rows: &default-rows
     bottom:
     home:
     top:
+    way-up-there:
 
 units:
   gateronX: 15.8
@@ -25,6 +26,8 @@ points:
           key:
             spread: 1.3u
             stagger: -.3u
+        index-reach:
+          key:
     pinky:
       anchor:
         ref: main_ring_bottom
@@ -54,15 +57,19 @@ points:
             spread: 1.2u
             stagger: -.3u
             rotate: -20
-        bottom:
+        bottom-left:
           key:
-            spread: -1.3u
-            stagger: -1u
-            rotate: -4
+            spread: -2u
+            stagger: -1.2u
+            rotate: -10
+        bottom-right:
+          key:
+            spread: 1.2u
+            rotate: 10
         top-right:
            key:
-             spread: 1.7u
-             stagger: 2u
+             spread: 1.17u
+             stagger: 2.2u
              rotate: -20
   mirror:
     ref: main_index_home
