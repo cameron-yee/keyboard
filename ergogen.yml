@@ -3,7 +3,6 @@ default-rows: &default-rows
     bottom:
     home:
     top:
-    way-up-there:
 
 units:
   gateronX: 15.8
@@ -15,62 +14,87 @@ $default_width: u
 
 points:
   zones:
-    main:
+    index-reach:
+      <<: *default-rows
+      rotate: 10
+      columns:
+        main:
+          key:
+            stagger: -.2u
+            spread: 1.1u
+    index:
       <<: *default-rows
       anchor:
-        rotate: -20
+        ref: index-reach_main_bottom
+        shift: [1u, .5u]
+        rotate: 0
       columns:
-        ring:
-        middle:
-        index:
+        main:
           key:
-            spread: 1.3u
-            stagger: -.3u
-        index-reach:
+            stagger: -.2u
+            spread: 1.1u
+    middle:
+      <<: *default-rows
+      anchor:
+        ref: index_main_bottom
+        shift: [1u, -.5u]
+        rotate: -10
+      columns:
+        main:
           key:
+            stagger: .2u
+    ring:
+      <<: *default-rows
+      anchor:
+        ref: middle_main_bottom
+        rotate: -5
+        shift: [1.1u, -0.2u]
+      columns:
+        main:
     pinky:
       anchor:
-        ref: main_ring_bottom
-        shift: [-1.3u, .2u]
-        rotate: 40
-      columns:
+        ref: ring_main_bottom
+        shift: [2u, -.4u]
+        rotate: 8
+      rows:
         home:
-        top-left:
-          key:
-            stagger: 1u
-            spread: -.5u
-        top-right:
+        bottom:
+      columns:
+        main:
+          key.shift: [-0.3u, 0]
+        outer:
+          key.shift: [-0.3u, 0]
+
     thumb:
       anchor:
-        ref: main_index_bottom
-        shift: [-.5u, -1.3u]
+        ref: index_main_bottom
+        shift: [0u, -1.3u]
       columns:
-        left:
-          key:
-            rotate: 5
-        home:
-          key:
-            spread: 1.2u
-            rotate: -5
-        right:
-          key:
-            spread: 1.2u
-            stagger: -.3u
-            rotate: -20
-        bottom-left:
-          key:
-            spread: -2u
-            stagger: -1.2u
-            rotate: -10
-        bottom-right:
-          key:
-            spread: 1.2u
-            rotate: 10
-        top-right:
-           key:
-             spread: 1.17u
-             stagger: 2.2u
-             rotate: -20
-  mirror:
-    ref: main_index_home
-    distance: 150
+        one:
+        two:
+          key.shift: [-2.2u, -0.1u]
+          key.rotate: 10
+        three:
+          key.shift: [-4.3u, -0.4u]
+          key.rotate: 20
+        four:
+          key.shift: [-6.3u, -0.9u]
+          key.rotate: 30
+        five:
+          key.shift: [-8.2u, -1.55u]
+          key.rotate: 40
+        six:
+          key.shift: [-7.1u, .85u]
+          key.rotate: 10
+        seven:
+          key.shift: [-9.2u, .5u]
+          key.rotate: 20
+        eight:
+          key.shift: [-11.2u, 0u]
+          key.rotate: 30
+        nine:
+          key.shift: [-10.3u, 1.9u]
+          key.rotate: 10
+  # mirror:
+  #   ref: pinky-reach_main_home
+  #   distance: -350
